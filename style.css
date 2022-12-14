@@ -1,0 +1,443 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6, */
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+  * Show the overflow in IE.
+  * 1. Show the overflow in Edge.
+  */
+
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+  * Remove the inheritance of text transform in Edge, Firefox, and IE.
+  * 1. Remove the inheritance of text transform in Firefox.
+  */
+
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+  * Correct the inability to style clickable types in iOS and Safari.
+  */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+.container {
+  font-family: "Roboto Condensed", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 6fr 40px;
+}
+
+.sidebar {
+  display: grid;
+  grid-template-rows: 120px 200px 200px;
+  /* gap: 60px; */
+  background-color: #581c87;
+  color: white;
+  grid-area: 1 / 1 / 4 / 2;
+}
+
+.logo {
+  /* display: grid; */
+  margin: 30px 10px 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.sidebar h2 {
+  display: inline;
+}
+
+.sidebar ul > li {
+  cursor: pointer;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav ul > li {
+  list-style: none;
+  font-weight: 600;
+  margin-top: 18px;
+}
+
+.settings ul > li {
+  list-style: none;
+  font-weight: 600;
+  margin-top: 18px;
+}
+
+.settings {
+  margin-top: 150px;
+}
+
+.header {
+  background-color: #f3e8ff;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 25px;
+  grid-area: 1 / 2 / 2 / 3;
+  border-bottom: #581c87;
+}
+
+.searchbar {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+input {
+  border-radius: 20px;
+  border: none;
+  background-color: #f5f5f4;
+  flex: 1;
+  height: 20px;
+}
+
+input:active {
+  border: none;
+}
+.notification {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  gap: 30px;
+  margin-right: 60px;
+  justify-content: flex-end;
+}
+.notification span {
+  font-weight: 600;
+  cursor: pointer;
+}
+img {
+  width: 50px;
+  cursor: pointer;
+}
+
+.greeting {
+  display: flex;
+  margin-left: 40px;
+  align-items: center;
+  gap: 15px;
+}
+
+.greeting span {
+  font-weight: 600;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 60px;
+  gap: 40px;
+  /* font-family: inherit; */
+}
+
+.buttons button {
+  padding: 8px 20px 8px 20px;
+  border-radius: 20px;
+  background-color: #581c87;
+  color: #f3e8ff;
+  border-style: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background-color: #5e2f83;
+}
+
+.main {
+  background-color: #f5f5f4;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 30px 4fr 1fr;
+  padding-left: 40px;
+  padding-top: 30px;
+  gap: 20px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 2fr));
+  /* grid-template-rows: 30px 5fr; */
+  gap: 20px;
+  grid-area: 2 / 1/ 3/ 2;
+  margin-top: 20px;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  background-color: white;
+  height: 215px;
+  border-radius: 8px;
+  border-left: solid 6px #581c87;
+  /* justify-items: center; */
+  align-items: center;
+  gap: 5px;
+  box-shadow: 1px 1px 5px 2px #ccc;
+}
+
+.card h3 {
+  margin: 0;
+  align-self: end;
+  margin-left: 15px;
+}
+
+.card p {
+  margin: 0;
+  align-self: start;
+  margin-left: 15px;
+  padding-right: 50px;
+  color: #6d6c6c;
+}
+
+.card .icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-self: end;
+  gap: 30px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.right-bar {
+  margin-top: 5px;
+}
+
+.announcements {
+  background-color: white;
+  margin-right: 30px;
+
+  box-shadow: 1px 1px 5px 2px #ccc;
+  border-radius: 8px;
+}
+
+.mini-announc {
+  display: grid;
+  padding: 10px;
+  grid-template-rows: 1fr 1fr;
+  margin-left: 20px;
+  /* border-bottom: solid 1px #6d6c6c; */
+}
+
+.mini-announc p {
+  color: #6d6c6c;
+  align-self: start;
+  padding-bottom: 15px;
+  border-bottom: solid 1px #581c87;
+}
+
+.mini-announc h4 {
+  margin: 0;
+  align-self: end;
+  margin-bottom: 3px;
+}
+
+.trending {
+  display: grid;
+  background-color: white;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  margin-right: 30px;
+  box-shadow: 1px 1px 5px 2px #ccc;
+  border-radius: 8px;
+  gap: 30px;
+}
+
+.people {
+  display: flex;
+  margin-left: 20px;
+  gap: 20px;
+}
+
+.people .user {
+  display: grid;
+}
+
+.user h4 {
+  margin: 0;
+  align-self: end;
+  margin-bottom: 3px;
+}
+
+.user p {
+  /* justify-self: start; */
+  color: #6d6c6c;
+}
+
+.footer {
+  display: flex;
+  text-align: center;
+  background-color: #f3e8ff;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer p {
+  font-weight: 600;
+}
